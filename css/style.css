@@ -98,25 +98,38 @@ main{
 .myskills {
     background: url(../img/bgskills.png)center/cover no-repeat;
 }
+.myskillinfo{
+    display: flex; 
+    justify-content: space-between;
+}
 .myskills h2{
     padding-top: 107px;
-    padding-bottom: 248px;
+    padding-bottom: 248px;  
     text-align: center;
     font-size: 34px;
     color: #263244;
 }
 .skill1 {
-    max-width: 100px;
-    text-align: center;
+    color: #4b5565;
+    font-family: "Calibri";
+    margin: 220px 82px 92px 209px;
 }
 .skill1 h3{
+    text-align: center;
     font-size: 19px;
     color: #cf7600;
     font-weight: bold;
 }
 .skill1 h4{
+    text-align: center;
     font-size: 17px;
     color: #3f495a;
+}
+.skill2{
+    font-family: "Calibri";
+    margin: 220px 82px 92px 82px;
+    max-width: 350px;
+    text-align: center;
 }
 .skill2 h3{
     font-size: 19px;
@@ -127,6 +140,11 @@ main{
     font-size: 17px;
     color: #3f495a;
 }
+.skill3{
+    font-family: "Calibri";
+    margin: 220px 82px 92px 82px;
+    text-align: center;
+}
 .skill3 h3{
     font-size: 19px;
     color: #cf7600;
@@ -135,6 +153,12 @@ main{
 .skill3 h4{
     font-size: 17px;
     color: #3f495a;
+}
+.skill4{
+    font-family: "Calibri";
+    margin: 220px 209px 92px 82px;
+    max-width: 350px;
+    text-align: center;
 }
 .skill4 h3{
     font-size: 19px;
@@ -199,16 +223,19 @@ main{
     padding-bottom: 89px;
     color: #323e4f;
 }
-.statistics h2{
+.statistics1 h2{
     font-size: 38px;
     color: #323e4f;
     text-align: center;
+    font-family: "Impact";
+    padding-bottom: 30px;
 }
-.statistics h3{
+.statistics1 h3{
     color: #3f4b5b;
     font-size: 25px;
     text-align: center;
     font-weight: bold;
+    font-family: "Impact";
 }
 .comment h2{
     padding-top: 107px;
@@ -269,7 +296,7 @@ main{
     margin: 0px 593px 14px 297px;
     border: 3px solid black;
     background: #d2d6dc;
-    padding: 10px 350px 12px 13px;
+    padding: 10px 670px 90px 13px;
 }
 .messagesubmit input{
     border: 3px solid #fff;
@@ -379,4 +406,23 @@ main{
 }
 .comment img:hover{
     transform: scale(1.5,1.5);
+}
+.statistics1{
+    display: flex; 
+    justify-content: space-between;
+}
+.infostat1{
+    padding: 204px 156px 101px 219px;
+}
+.infostat1 h2{
+    padding-bottom: 30px;
+}
+.infostat2{
+    padding: 204px 156px 101px 156px;
+}
+.infostat3{
+    padding: 204px 156px 101px 156px;
+}
+.infostat4{
+    padding: 204px 219px 101px 156px;
 }
