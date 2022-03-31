@@ -6,12 +6,12 @@ nav{
     height: 60px;
     background: #344051;
     position: fixed;
+    z-index: 10;
 }
 .logo{
     color: #fff;
-    font-size: 28px;
+    font-size: 17px;
     line-height: 60px;
-    padding-left: 388px;
     float: left;
     animation: comming 2s ease;
 }
@@ -21,14 +21,13 @@ main{
 }
 .menu{
     float: left;
-    padding-left: 432px;
 }
 .menu li{
     float: left;
     line-height: 60px;
     color: #fff;
     margin-right: 40px;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     animation: topshift 0.4s ease forwards;
     opacity: 0;
@@ -40,16 +39,17 @@ main{
 }
 .title_container{
     float: left;
-    margin: 432px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
+    width: 100%;
     opacity: 0;
     animation: titlemove 1s ease forwards;
     animation-delay: 2.4s;
 }
 .title_container h1{
+    font-family: Arial, sans-serif;
     font-size: 60px;
-    font-weight: bold;
+    font-weight: 600;
 }
 .title_container h4{
     margin-top: 40px;
@@ -68,68 +68,67 @@ main{
     margin: 58px 14px 0px 14px;
 }
 .info{
-    margin: 107px 447px 57px 447px;
 }
 .info h2{
-    text-align: center;
-    font-size: 34px;
     color: #263244;
     font-family: "Franklin Gothic";
 }
 .info img{
-    margin: 89px 410px 35px 410px;
 }
 .info h4{
-    margin-top: 44px;
-    font-size: 18px;
     color: #3f495a;
     font-family: "Calibri";
 }
 .info input{
-    height: 40px;
-    text-align: center;
-    border: 2px solid #6d7682;
+    height: 45px;
+    border: 3px solid #6d7682;
     background: none;
-    border-radius: 5px;
+    border-radius: 10px;
     color: #6f707e;
     font-size: 17px;
-    margin: 36px 440px 99px 440px;
+    background: url(../img/dowload.png) no-repeat center left 15px;
+    padding-left: 45px;
+    padding-right: 25px;
+    background-size: auto;
+    margin-bottom: 100px;
+}
+.info hr{
+    color: #ea7700;
+    opacity: 100%;
+}
+.aboutMe h2{
+    margin-top: 107px;
 }
 .myskills {
-    background: url(../img/bgskills.png)center/cover no-repeat;
+    background: url(../img/bgskills.png) no-repeat center;
+    background-size: 100%;
 }
-.myskillinfo{
-    display: flex; 
-    justify-content: space-between;
+.infoSkill{
+}
+.myskills hr{
+    color: #ea7700;
+    opacity: 100%;
 }
 .myskills h2{
-    padding-top: 107px;
-    padding-bottom: 248px;  
-    text-align: center;
     font-size: 34px;
     color: #263244;
 }
 .skill1 {
     color: #4b5565;
     font-family: "Calibri";
-    margin: 220px 82px 92px 209px;
 }
 .skill1 h3{
-    text-align: center;
     font-size: 19px;
     color: #cf7600;
     font-weight: bold;
 }
 .skill1 h4{
-    text-align: center;
     font-size: 17px;
     color: #3f495a;
 }
 .skill2{
+    font-size: 17px;
     font-family: "Calibri";
-    margin: 220px 82px 92px 82px;
-    max-width: 350px;
-    text-align: center;
 }
 .skill2 h3{
     font-size: 19px;
@@ -142,8 +141,6 @@ main{
 }
 .skill3{
     font-family: "Calibri";
-    margin: 220px 82px 92px 82px;
-    text-align: center;
 }
 .skill3 h3{
     font-size: 19px;
@@ -156,9 +153,7 @@ main{
 }
 .skill4{
     font-family: "Calibri";
-    margin: 220px 209px 92px 82px;
     max-width: 350px;
-    text-align: center;
 }
 .skill4 h3{
     font-size: 19px;
@@ -170,46 +165,72 @@ main{
     color: #3f495a;
 }
 .cases h2{
-    padding-top: 110px;
-    padding-bottom: 70px;
     font-size: 33px;
     color: #384354;
-    text-align: center;
 }
 .cases h4{
     font-size: 25px;
     color: #384354;
     font-family: "Franklin Gothic";
-    text-align: center;
 }
 .cases h5{
-    padding-bottom: 42px;
     font-size: 17px;
     color: #3f495a;
-    text-align: center;
+}
+.cases hr{
+    color: #ea7700;
+    opacity: 100%;
+}
+.cases img{
+    height: 100%;
+}
+.cases input{
+    height: 40px;
+    border: 3px solid #00b6af;
+    background: #00b6af;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-size: auto;
+    margin-bottom: 183px;
 }
 .cost h2{
     font-size: 46px;
-    text-align: center;
 }
 .cost h3{
     font-size: 29px;
-    text-align: center;
 }
-.cost input{
+.cost select{
+    height: 50px;
+    border: 5px solid none;
+    background: #efefef;
+    border-radius: 5px;
+    color: gray;
+    font-size: 20px;
+    padding-left: 25px;
+    padding-right: 1000px;
+    margin-bottom: 52px;
 }
 .deadline {
     font-size: 21px;
-    text-align: center;
 }
 .price {
     font-size: 21px;
-    text-align: center;
-    padding-bottom: 155px;
-    padding-top: 15px;
+}
+.cost input{
+    height: 45px;
+    border: 3px solid #00b6af;
+    background: #00b6af;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-bottom: 39px;
 }
 .statistics {
-    height: 600px;
     background: url(../img/statistics.png) no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -217,23 +238,17 @@ main{
     background-size: cover;
 }
 .statistics h1{
-    text-align: center;
     font-size: 33px;
-    padding-top: 147px;
-    padding-bottom: 89px;
     color: #323e4f;
 }
 .statistics1 h2{
     font-size: 38px;
     color: #323e4f;
-    text-align: center;
     font-family: "Impact";
-    padding-bottom: 30px;
 }
 .statistics1 h3{
     color: #3f4b5b;
     font-size: 25px;
-    text-align: center;
     font-weight: bold;
     font-family: "Impact";
 }
@@ -312,6 +327,7 @@ main{
     color: white;
     transform: scale(1);
     display: inline-block;
+    text-decoration: none;
 }
 .menu li a:visited{
     color: white;
@@ -372,7 +388,7 @@ main{
     }
     to{
         opacity: 1;
-        margin-left: 404px;
+        margin-left: 0px;
     }
 }
 .info input:hover{
@@ -425,4 +441,31 @@ main{
 }
 .infostat4{
     padding: 204px 219px 101px 156px;
+}
+.white-btn:visited{
+    color: white;
+}
+@media (max-width:991px){
+    .title__container, .title__container h4, .title__container input{
+        color: white;
+        position: relative;
+        z-index: 3;
+    }
+    .title__container input{
+        border: 2px solid #6d7682;
+    }
+.main{
+    position: relative; 
+
+}
+.main::after{
+    content: "";
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fsolute;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
 }
