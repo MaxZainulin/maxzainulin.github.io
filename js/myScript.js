@@ -1,134 +1,58 @@
-"use strict"
+$(document).ready(function () {
 
-window.onload = ()=>
-{
+    var show = true;
+    var countbox = ".statistics-header";
+    $(window).on("scroll load resize", function () {
+        if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+        var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+        var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+        var w_height = $(window).height(); // Высота окна браузера
+        var d_height = $(document).height(); // Высота всего документа
+        var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+        if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+            $('.statistics_number').css('opacity', '1');
+            $('.statistics_number').spincrement({
+                thousandSeparator: "",
+                duration: 1200
+            });
 
-const name = prompt("Пожалуйста, представьтесь?", "Имя");
-   alert("Добро пожаловать, " + name);
+            show = false;
+        }
+    });
 
-
-const age = prompt("Подтвердите, что вы совершеннолетний! Укажите ваш возраст!", "Возраст");
-if(age >= 18) {
-    alert("Вам есть 18 :)");
-}else {
-    alert("Приходите позже, вам нет 18 :( ");
-}  
-
-
-/*
-Выбор
-Тип сайта (Портал, Визитка, Промо, Каталог, Магазин, другое...)
-дизайн (Простой, сложный, интернет-магазин)
-адаптивность (Да/Нет)
-*/
-
-
-/*
-var userChoice
-var typeSite = 'Какой тип сайта? (Портал, Визитка, Промо, Каталог, Магазин, другое...)';
-var choises = ["Портал", "Визитка" , "Каталог", "Магазин", "Другое"];
-while ((userChoice = prompt(typeSite)) && choises.indexOf(userChoice) === -1); 
-*/
-
-/* 
-if (choises == "Портал"){
-    alert("Стоимость = " + 100 + " RUB")
-} else {
-alert ("Стоимость = " + 1111 + " RUB")
-};
-*/
-
-
-/* 
-function typeSite (){
-    name0 = "Портал", price = 1000,
-    name1 = "Визитка", price1 = 500,
-    name2 = "Промо", price2 = 500,
-    name3 = "Каталог", price3 = 800,
-    name4 = "Магазин", price4 = 2000,
-    name5 = "Другое", price5 = 100, 
-}; 
-*/
+});
 
 /*
- function calculator (){
-    let card = "Визитка";
-    let portal = "Портал";
-    let catalog = "Каталог";
-    let onlineShop = "Интернет-Магазин";
-    let otherType = "Другое";
-    let sum;
-    let some = prompt("Какой тип сайта? (Портал, Визитка, Каталог, Магазин, Другое)")
-    /*
-    if (some == card) {
-        alert(sum = 1000 + " RUB");
-    }
-}*/
+var $type = $('#type-site-ID')
+   ,$design = $('#design_site_ID')
+   ,$adaptive = $('#adaptive_site_ID')
+   ,$tot = $('#total-price')
+   ,prices = {
+   // номер_направления: { номер_кол-ва: цена, }
+     1: { 1: 500, 2: 1300, 3: 1700, 4: 2000, 5: 2700 },
+     2: { 1: 500, 2: 1500, 3: 2100, 4: 2500 },
+     3: { 1: null,2: 1400 }
+   }
+;
 
-
-let costBuild = 0;
-//let deadlineBuild = 0;
-
-function typeSite() {
-    let userChoice1 = prompt("Какой тип сайта? (Портал, Визитка, Каталог, Магазин, Другое)");
-    if (userChoice1 == "Портал"){
-        costBuild = 500;
-        //deadlineBuild = 1;
-    } else if (userChoice1 == "Визитка"){
-        costBuild = 200;
-        //deadlineBuild = 2;
-    } else if (userChoice1 == "Каталог"){
-        costBuild = 600;
-        //deadlineBuild = 1;
-    } else if (userChoice1 == "Магазин"){
-        costBuild = 1000;
-        //deadlineBuild = 3;
-    } else if (userChoice1 == "Другое"){
-        costBuild = 100;
-        //deadlineBuild = 1;
-    }
-    return costBuild;
+function update() {
+  var typeSite = $type.val(); // значение направления
+  var designSite = $design.val(); // значение кол-ва
+  $tot.val( prices[type]  &&  prices[type][design]); 
 }
 
-    let costDesign = 0;
-    //let deadlineDesign = 0;
+// слушать собятия обновления значений
+$type.on('change', update);
+$design.on('change', update); 
+*/
 
-    function designSite(){
-        let userChoice2 = prompt("Какой дизайн сайта? (Минимализм, Стандарт, Средний, Балдежный)");
-        if (userChoice2 == "Минимализм"){
-            costDesign = 250;
-            //deadlineDesign = 1;
-        } else if (userChoice2 == "Стандарт"){
-            costDesign = 400;
-            //deadlineDesign = 1;
-        } else if (userChoice2 == "Средний"){
-            costDesign = 800;
-            //deadlineDesign = 2;
-        } else if (userChoice2 == "Балдежный"){
-            costDesign = 1200;
-            //deadlineDesign = 3;
-        }
-        return costDesign;
-    }
+function calculatePrice()
+{
+  var typeSite = document.getElementById('typeSite').value;
+  var designSite = document.getElementById('designSite').value;
+  var adaptiveSite = document.getElementById('adaptiveSite').value;
 
-    let costAdaptive = 0;
-    //let deadlineAdaptive = 0;
+  var price = typeSite.values + designSite.values + adaptiveSite.values;
 
-    function adaptiveSite(){
-        let userChoice3 = prompt("Нужна адаптивность? (Да, Нет)");
-        if (userChoice3 == "Да"){
-            costAdaptive = 800;
-            //deadlineAdaptive = 2;
-        } else if (userChoice3 == "Нет"){
-            costAdaptive = 0;
-            //deadlineAdaptive = 0;
-        }
-        return costAdaptive;
-    }
-
-    let costSum = typeSite(costBuild) + designSite(costDesign) + adaptiveSite(costAdaptive);
-    // let adaptiveSum = typeSite(deadlineBuild) + designSite(deadlineDesign) + adaptiveSite(deadlineAdaptive);
-
-    alert(name + " Ваш сайт будет стоить: " + costSum);
-
-};
+  document.getElementById('price').innerHTML = price.toFixed(3);
+}

@@ -8,6 +8,9 @@ nav{
     position: fixed;
     z-index: 10;
 }
+:target{
+    scroll-margin-top: 60px;
+}
 .logo{
     color: #fff;
     font-size: 17px;
@@ -56,24 +59,20 @@ main{
     font-size: 22px;
     color: #79818d;
 }
-.title_container input{
+.title_container a{
     height: 40px;
     text-align: center;
     border: 2px solid #6d7682;
+    text-decoration: none;
     background: none;
     border-radius: 5px;
     color: #6d7682;
-    font-size: 13px;
-    padding: 0px 16px;
-    margin: 58px 14px 0px 14px;
-}
-.info{
+    font-size: 15px;
+    padding: 4px 18px 4px 18px;
 }
 .info h2{
     color: #263244;
     font-family: "Franklin Gothic";
-}
-.info img{
 }
 .info h4{
     color: #3f495a;
@@ -103,7 +102,10 @@ main{
     background: url(../img/bgskills.png) no-repeat center;
     background-size: 100%;
 }
-.infoSkill{
+.infoSkill img{
+    padding-bottom: 41px;
+    width: 50px;
+    height: 75px;
 }
 .myskills hr{
     color: #ea7700;
@@ -219,7 +221,7 @@ main{
 .price {
     font-size: 21px;
 }
-.cost input{
+.cost button{
     height: 45px;
     border: 3px solid #00b6af;
     background: #00b6af;
@@ -230,88 +232,116 @@ main{
     padding-right: 35px;
     margin-bottom: 39px;
 }
-.statistics {
-    background: url(../img/statistics.png) no-repeat;
+.statistics{
+    background: url(../img/bgstat.png) no-repeat center;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-size: 150%;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
-.statistics h1{
+.statistics hr{
+    color: #ea7700;
+    opacity: 100%;
+}
+.statistics-title img{
+    width: 50px;
+    height: 45px;
+}
+.statistics-header h1{
     font-size: 33px;
     color: #323e4f;
+    text-transform: uppercase;
+    font-weight: bold;
 }
-.statistics1 h2{
+.statistics-title h2{
     font-size: 38px;
     color: #323e4f;
     font-family: "Impact";
+    padding-bottom: 15px;
+    opacity: 0;
 }
-.statistics1 h3{
+.statistics-title h3{
     color: #3f4b5b;
     font-size: 25px;
-    font-weight: bold;
+    text-transform: uppercase;
     font-family: "Impact";
 }
-.comment h2{
-    padding-top: 107px;
-    padding-bottom: 97px;
+.reviews {
+    padding-top: 104px;
+    padding-bottom: 91px;
+}
+.reviews h2{
     font-size: 34px;
     color: #243042;
     text-align: center;
     font-family: "Franklin Gothic";
+    font-weight: bold;
+    text-transform: uppercase;
 }
-.comment h3{
+.reviews hr{
+    color: #ea7700;
+    opacity: 100%;
+}
+.reviews h3{
     font-size: 17px;
     font-family: "Calibri";
-    text-align: center;
 }
-.comment h5{
+.reviews h5{
     font-size: 17px;
     font-weight: bold;
     font-family: "Calibri";
-    text-align: center;
-    padding-top: 40px;
-}
-.comment img{
-    padding: 0px 914px 40px 880px;
 }
 .feedback {
     background: url(../img/contac.png) center/cover no-repeat;
+    padding-top: 104px;
+    padding-bottom: 168px;
 }
 .feedback h1{
-    padding-top: 105px;
-    padding-bottom: 70px;
-    text-align: center;
     font-size: 34px;
     color: #fff;
 }
 .feedback h4{
     font-size: 17px;
     color: #fff;
-    padding-bottom: 156px;
-    text-align: center;
 }
 .feedback h3{
-    text-align: center;
-    padding-bottom: 56px;
     color: #fff;
     font-size: 21px;
 }
 .feedback input {
-    margin: 0px 593px 14px 28px;
     border: 3px solid black;
     background: #d2d6dc;
-    padding: 10px 200px 12px 13px;
+}
+.feedback hr{
+    color: #ea7700;
+    opacity: 100%;
+}
+.feedback img{
+    width: 30px;
+    height: 30px;
+}
+.feedback-message h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 15px;
 }
 .messagename input {
-    margin: 0px 29px 14px 297px;
-    padding: 10px 200px 12px 13px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+}
+.email input {
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 12px;
 }
 .feedback textarea {
-    margin: 0px 593px 14px 297px;
     border: 3px solid black;
     background: #d2d6dc;
-    padding: 10px 670px 90px 13px;
+    margin-top: 15px;
 }
 .messagesubmit input{
     border: 3px solid #fff;
@@ -319,7 +349,6 @@ main{
     border-radius: 5px;
     color: #fff;
     font-size: 17px;
-    margin: 64px 896px 168px 896px;
     padding: 18px 18px 13px 18px;
 }
 .menu li a{
@@ -338,14 +367,14 @@ main{
 .menu li a:active{
     transform: scale(1.1);
 }
-.title_container input{
+.title_container a{
     transition: all 0.2s;
 }
-.title_container input:hover{
+.title_container a:hover{
     background: #344051;
     color: white;
 }
-.title_container input:active{
+.title_container a:active{
     transform: scale(1.1);
 }
 @keyframes comming{
@@ -423,10 +452,6 @@ main{
 .comment img:hover{
     transform: scale(1.5,1.5);
 }
-.statistics1{
-    display: flex; 
-    justify-content: space-between;
-}
 .infostat1{
     padding: 204px 156px 101px 219px;
 }
@@ -446,12 +471,12 @@ main{
     color: white;
 }
 @media (max-width:991px){
-    .title__container, .title__container h4, .title__container input{
+    .title__container, .title__container h4, .title__container a{
         color: white;
         position: relative;
         z-index: 3;
     }
-    .title__container input{
+    .title__container a{
         border: 2px solid #6d7682;
     }
 .main{
