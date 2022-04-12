@@ -179,8 +179,8 @@
 
         <h3>ТИП САЙТА</h3>
         <div class="input-group">
-        <select name="type_site" aria-label=".form-select-lg example" id="typeSite">
-            <option selected>Выберите пункт...</option>
+        <select name="type_site" id="typeSite">
+            <option value="0" selected>Выберите пункт...</option>
             <option value="500">Портал</option>
             <option value="300" >Визитка</option>
             <option value="250" >Каталог</option>
@@ -192,8 +192,8 @@
         <div class="input-group">
            <h3>ДИЗАЙН САЙТА</h3>
         <select name="design_site" id="designSite">
-            <option selected>Выберите пункт...</option>
-            <option value="100">Минимализм</option>
+            <option value="0" selected>Выберите пункт...</option>
+            <option value="100" >Минимализм</option>
             <option value="200">Стандарт</option>
             <option value="300">Средний</option>
             <option value="500">Балдежный</option>
@@ -202,17 +202,18 @@
 
         <div class="input-group">
            <h3>АДАПТИВНОCТЬ САЙТА</h3>
-        <select name="adaptive_site" id="adaptiveSite">
-            <option selected>Выберите пункт...</option>
+        <select name="adaptive_site" id="adaptiveSite" >
+            <option value="0" selected>Выберите пункт...</option>
             <option value="1000">Да</option>
             <option value="0">Нет</option>
         </select>
     </div>
     
-        <hr class="mt-3 mb-3" width="1200" size="6"/>
+        <hr class="mt-3 mb-3" width="1200" size="7"/>
 
-           <div id="deadline">Сроки: <div id="deadline"> 0 </div></div>
-           <div>Стоимость: <div id="price"> 0 </div></div>
+           <div>Сроки: <div id="deadline"> 0 </div></div>
+
+           <div class="calculator-cost"><span>Стоимость: </span><span id="price"> 0 </span> <span>рублей</span></div>
 
            <button type="button" class="d-block mx-auto mt-5 mb-5" onclick="calculatePrice()">Оставить заявку</button>
         </div>
@@ -334,7 +335,12 @@
 
 
 
-
+    <div id="modal-content">
+    <h2>Вы уже нас покидаете?</h2>
+    <img src="img/cuteSmile.jpg" alt="" width="150">
+    <h4>Останьтесь с нами :)</h4>
+    <a id="modal-close" href="#close">Закрыть</a>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>

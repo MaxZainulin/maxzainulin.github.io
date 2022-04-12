@@ -19,40 +19,34 @@ $(document).ready(function () {
             show = false;
         }
     });
+  });
 
-});
 
-/*
-var $type = $('#type-site-ID')
-   ,$design = $('#design_site_ID')
-   ,$adaptive = $('#adaptive_site_ID')
-   ,$tot = $('#total-price')
-   ,prices = {
-   // номер_направления: { номер_кол-ва: цена, }
-     1: { 1: 500, 2: 1300, 3: 1700, 4: 2000, 5: 2700 },
-     2: { 1: 500, 2: 1500, 3: 2100, 4: 2500 },
-     3: { 1: null,2: 1400 }
-   }
-;
+setTimeout(function(){ 
+  modalwin = document.getElementById('modal-content');
+  modalwin.style.display="block"; 
+  document.getElementById("modal-close").addEventListener("click", function(){
+      modalwin.style.display="none";            
+  });
+}, 5000);
 
-function update() {
-  var typeSite = $type.val(); // значение направления
-  var designSite = $design.val(); // значение кол-ва
-  $tot.val( prices[type]  &&  prices[type][design]); 
-}
 
-// слушать собятия обновления значений
-$type.on('change', update);
-$design.on('change', update); 
-*/
 
-function calculatePrice()
-{
+document.getElementById("calculator").addEventListener('change',function calculatePrice(){
   var typeSite = document.getElementById('typeSite').value;
   var designSite = document.getElementById('designSite').value;
   var adaptiveSite = document.getElementById('adaptiveSite').value;
+  
+  /*
+  $("#typeSite").val();
+  $("#designSite").val();
+  $("#typeSite").val();
+   */
+  typeSite = Number(typeSite);
+  designSite = Number(designSite);
+  adaptiveSite = Number(adaptiveSite);
 
-  var price = typeSite.values + designSite.values + adaptiveSite.values;
+  var price = typeSite + designSite + adaptiveSite;
 
-  document.getElementById('price').innerHTML = price.toFixed(3);
-}
+  document.getElementById('price').innerHTML = price.toFixed(2);
+  });
