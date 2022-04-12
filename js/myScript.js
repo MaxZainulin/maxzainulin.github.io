@@ -22,13 +22,6 @@ $(document).ready(function () {
   });
 
 
-setTimeout(function(){ 
-  modalwin = document.getElementById('modal-content');
-  modalwin.style.display="block"; 
-  document.getElementById("modal-close").addEventListener("click", function(){
-      modalwin.style.display="none";            
-  });
-}, 5000);
 
 
 
@@ -50,3 +43,12 @@ document.getElementById("calculator").addEventListener('change',function calcula
 
   document.getElementById('price').innerHTML = price.toFixed(2);
   });
+  
+  
+setTimeout(function(){ 
+  modalwin = document.getElementById('modal-content');
+  modalwin.style.display="block"; 
+  document.getElementById("modal-close").addEventListener("click", function(){
+      modalwin.style.display="none";            
+  });
+}, 5000);
