@@ -18,11 +18,7 @@ $(document).ready(function () {
 
             show = false;
         }
-    });
   });
-
-
-
 
 
 document.getElementById("calculator").addEventListener('change',function calculatePrice(){
@@ -42,7 +38,8 @@ document.getElementById("calculator").addEventListener('change',function calcula
   var price = typeSite + designSite + adaptiveSite;
 
   document.getElementById('price').innerHTML = price.toFixed(2);
-  });
+  })
+});
   
   
 setTimeout(function(){ 
