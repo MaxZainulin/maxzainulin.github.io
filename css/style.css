@@ -333,16 +333,28 @@ main{
     padding-left: 15px;
     padding-top: 10px;
     padding-bottom: 12px;
+    max-width:100%; 
+    width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
 }
 .email input {
     padding-left: 15px;
     padding-top: 10px;
     padding-bottom: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width:100%; 
+    min-width: 100%;
 }
 .feedback textarea {
     border: 3px solid black;
     background: #d2d6dc;
     margin-top: 15px;
+    box-sizing: border-box;
+    max-width:100%; 
+    width: 100%;
+    min-width: 100%;
 }
 .messagesubmit input{
     border: 3px solid #fff;
