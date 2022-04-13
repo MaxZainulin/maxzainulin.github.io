@@ -508,6 +508,14 @@ main{
 }
 }
 
+footer{
+    background: #2c3e50;
+}
+.copyright p{
+    color: white;
+    font-weight: bold;
+}
+
 #modal-content {
     display: none;
     position: fixed;
