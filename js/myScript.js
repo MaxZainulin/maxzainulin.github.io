@@ -19,7 +19,7 @@ $(document).ready(function () {
             show = false;
         }
       });
-  });
+    });
 
   setTimeout(function(){ 
     modalwin = document.getElementById('modal-content');
@@ -43,6 +43,10 @@ $(document).ready(function () {
   var price = typeSite + designSite + adaptiveSite;
 
   document.getElementById('price').innerHTML = price;
+  
+  var deadline = price / 500;
+
+  document.getElementById('deadline').innerHTML = deadline;
   };
   
-  
+ 
