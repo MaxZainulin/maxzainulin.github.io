@@ -296,6 +296,7 @@ main{
 }
 .feedback {
     background: url(../img/contac.png) center/cover no-repeat;
+    width: 100%;
     padding-top: 104px;
     padding-bottom: 168px;
 }
