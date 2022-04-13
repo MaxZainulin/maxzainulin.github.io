@@ -18,34 +18,31 @@ $(document).ready(function () {
 
             show = false;
         }
+      });
   });
 
+  setTimeout(function(){ 
+    modalwin = document.getElementById('modal-content');
+    modalwin.style.display="block"; 
+    document.getElementById("modal-close").addEventListener("click", function(){
+        modalwin.style.display="none";            
+    });
+  }, 5000);
 
-document.getElementById("calculator").addEventListener('change',function calculatePrice(){
+  
+  document.getElementById("calculatorID").addEventListener('change', calculatePrice());
+  function calculatePrice(){
   var typeSite = document.getElementById('typeSite').value;
   var designSite = document.getElementById('designSite').value;
   var adaptiveSite = document.getElementById('adaptiveSite').value;
   
-  /*
-  $("#typeSite").val();
-  $("#designSite").val();
-  $("#typeSite").val();
-   */
   typeSite = Number(typeSite);
   designSite = Number(designSite);
   adaptiveSite = Number(adaptiveSite);
 
   var price = typeSite + designSite + adaptiveSite;
 
-  document.getElementById('price').innerHTML = price.toFixed(2);
-  })
-});
+  document.getElementById('price').innerHTML = price;
+  };
   
   
-setTimeout(function(){ 
-  modalwin = document.getElementById('modal-content');
-  modalwin.style.display="block"; 
-  document.getElementById("modal-close").addEventListener("click", function(){
-      modalwin.style.display="none";            
-  });
-}, 5000);
